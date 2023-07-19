@@ -84,6 +84,16 @@ trait Sushi
         }
     }
 
+    protected function newRelatedInstance($class)
+    {
+        return tap(new $class, function ($instance) use ($class) {
+            if (!$instance->getConnectionName()) {
+                $instance->setConnection($this->getConnectionResolver()->getDefaultConnection());
+                parent::newRelatedInstance($class);
+            }
+        });
+    }
+
     protected static function setSqliteConnection($database)
     {
         $config = [

@@ -1,8 +1,12 @@
 {
-    "name": "calebporzio/sushi",
+    "name": "laniakea-labs/sushi",
     "description": "Eloquent's missing \"array\" driver.",
     "license": "MIT",
     "authors": [
+        {
+            "name": "Daniel Le Blanc",
+            "email": "daniel.leblanc@laniakea.ca"
+        },
         {
             "name": "Caleb Porzio",
             "email": "calebporzio@gmail.com"

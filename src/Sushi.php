@@ -111,7 +111,6 @@ trait Sushi
         return tap(new $class, function ($instance) {
             if (!$instance->getConnectionName()) {
                 $instance->setConnection($this->getConnectionResolver()->getDefaultConnection());
-                parent::newRelatedInstance($class);
             }
         });
     }
